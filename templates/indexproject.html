@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Detection and Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.alphacoders.com/805/805180.jpg');
+            background-size: cover;
+            background-position: center;
+            /* background-color: bisque; */
+            color: #f2f2f2;
+        }
+
+        .header {
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .header h3 {
+            margin: 0;
+        }
+
+        .navbar1 {
+            padding: 10px;
+            text-align: right;
+        }
+
+        .navbar1 ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .navbar1 li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .navbar1 li a {
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .navbar1 li a:hover {
+            background-color: #e74c3c;
+            /* Dark red background color on hover */
+        }
+
+        .navbar2 {
+            padding: 10px;
+            text-align: right;
+        }
+
+        .navbar2 ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .navbar2 li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .navbar2 li a {
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .navbar2 li a:hover {
+            background-color: #e74c3c;
+            /* Dark red background color on hover */
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80');
+        }
+
+        .content h1 {
+            font-family: fantasy;
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .steps {
+            margin: 20px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+
+        .steps h3 {
+            margin: 0;
+            padding: 0;
+            font-family: fantasy;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: black;
+            font-weight: bold;
+
+
+        }
+
+        .blur-background {
+            backdrop-filter: blur(8px);
+            /* Adjust the blur value as needed */
+            background-color: rgba(100, 100, 100, 0.1);
+            /* Adjust the background color and opacity as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h3>Welcome, farmer!</h3>
+    </header>
+
+    <div class="content">
+        <h1>Pest Detection and Classification</h1>
+        <div class="steps">
+            <h3>Here's how you can use our website to detect and identify pests:</h3>
+            <ol>
+                <li>Capture clear images of the affected areas.</li>
+                <li>Upload the images to our website.</li>
+                <li>Our advanced algorithms analyze the images.</li>
+                <li>Get instant pest identification results.</li>
+                <li>Receive recommendations and solutions.</li>
+            </ol>
+
+            <p>You can reference the below table to know what pests you can detect and how to deal with them</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Pest Name</th>
+                        <th>English Name</th>
+                        <th>Prevention Methods</th>
+                        <th>Pesticides/Insecticides</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anoplophora chinensis</td>
+                        <td>Asian Longhorned Beetle</td>
+                        <td>- Quarantine infested areas<br>- Destroy infested trees<br>- Monitor and trap adult beetles
+                        </td>
+                        <td>- Imidacloprid<br>- Acephate<br>- Dinotefuran</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Apriona germari (Hope)</td>
+                        <td>Japanese Pine Sawyer</td>
+                        <td>- Maintain tree vigor<br>- Remove and destroy infested trees<br>- Use pheromone traps</td>
+                        <td>- Bifenthrin<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Cerambycidae larvae</td>
+                        <td>Longhorn Beetle Larvae</td>
+                        <td>- Remove infested trees<br>- Avoid transporting infested wood</td>
+                        <td>- Acephate<br>- Malathion<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Chalcophora japonica</td>
+                        <td>Japanese Oak Longhorn Beetle</td>
+                        <td>- Remove and destroy infested trees<br>- Monitor and trap adult beetles</td>
+                        <td>- Imidacloprid<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Clostera anachoreta</td>
+                        <td>Green Caterpillar</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents<br>- Apply Bacillus thuringiensis
+                            (Bt)</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Cnidocampa flavescens (Walker pupa)</td>
+                        <td>Yellowtail Moth Pupa</td>
+                        <td>- Remove and destroy egg masses<br>- Apply sticky traps</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Cnidocampa flavescens (Walker)</td>
+                        <td>Yellowtail Moth</td>
+                        <td>- Remove and destroy egg masses<br>- Apply sticky traps</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Drosicha contrahens female</td>
+                        <td>Leaf Roller Female</td>
+                        <td>- Prune and destroy infested branches<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Drosicha contrahens male</td>
+                        <td>Leaf Roller Male</td>
+                        <td>- Prune and destroy infested branches<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Erthesina fullo</td>
+                        <td>Pale Green Weevil</td>
+                        <td>- Remove and destroy infested branches<br>- Prune tree canopy</td>
+                        <td>- Imidacloprid<br>- Bifenthrin<br>- Cypermethrin</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Erthesina fullo nymph</td>
+                        <td>Pale Green Weevil Nymph</td>
+                        <td>- Remove and destroy infested branches<br>- Prune tree canopy</td>
+                        <td>- Imidacloprid<br>- Bifenthrin<br>- Cypermethrin</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Erthesina fullo nymph-2</td>
+                        <td>Pale Green Weevil Nymph</td>
+                        <td>- Remove and destroy infested branches<br>- Prune tree canopy</td>
+                        <td>- Imidacloprid<br>- Bifenthrin<br>- Cypermethrin</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Hyphantria cunea</td>
+                        <td>Fall Webworm</td>
+                        <td>- Prune and destroy infested branches<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Hyphantria cunea larvae</td>
+                        <td>Fall Webworm Larvae</td>
+                        <td>- Prune and destroy infested branches<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Hyphantria cunea pupa</td>
+                        <td>Fall Webworm Pupa</td>
+                        <td>- Prune and destroy infested branches<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Latoia consocia Walker</td>
+                        <td>Coconut Rhinoceros Beetle</td>
+                        <td>- Collect and destroy larvae and adults<br>- Install pheromone traps</td>
+                        <td>- Carbaryl<br>- Imidacloprid<br>- Malathion</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Latoia consocia Walker larvae</td>
+                        <td>Coconut Rhinoceros Beetle Larvae</td>
+                        <td>- Collect and destroy larvae and adults<br>- Install pheromone traps</td>
+                        <td>- Carbaryl<br>- Imidacloprid<br>- Malathion</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Micromelalopha troglodyta (Graeser)</td>
+                        <td>Saturniid Moth</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Micromelalopha troglodyta (Graeser) larvae</td>
+                        <td>Saturniid Moth Larvae</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Monochamus alternatus</td>
+                        <td>Japanese Pine Sawyer</td>
+                        <td>- Remove and destroy infested trees<br>- Use pheromone traps</td>
+                        <td>- Bifenthrin<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Plagiodera versicolora (Laicharting)</td>
+                        <td>Colorado Potato Beetle</td>
+                        <td>- Handpick adults and larvae<br>- Rotate crops</td>
+                        <td>- Carbaryl<br>- Imidacloprid<br>- Spinosad</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Plagiodera versicolora (Laicharting) larvae</td>
+                        <td>Colorado Potato Beetle Larvae</td>
+                        <td>- Handpick adults and larvae<br>- Rotate crops</td>
+                        <td>- Carbaryl<br>- Imidacloprid<br>- Spinosad</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Plagiodera versicolora (Laicharting) ovum</td>
+                        <td>Colorado Potato Beetle Eggs</td>
+                        <td>- Handpick adults and larvae<br>- Rotate crops</td>
+                        <td>- Carbaryl<br>- Imidacloprid<br>- Spinosad</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Psacothea hilaris (Pascoe)</td>
+                        <td>Palm Beetle</td>
+                        <td>- Remove and destroy infested plants<br>- Apply insecticidal soap</td>
+                        <td>- Imidacloprid<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Psilogramma menephron</td>
+                        <td>Silk Moth</td>
+                        <td>- Remove and destroy infested trees<br>- Use pheromone traps</td>
+                        <td>- Bifenthrin<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Psilogramma menephron larvae</td>
+                        <td>Silk Moth Larvae</td>
+                        <td>- Remove and destroy infested trees<br>- Use pheromone traps</td>
+                        <td>- Bifenthrin<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Sericinus montela</td>
+                        <td>Stalk Borer</td>
+                        <td>- Remove and destroy infested plants<br>- Apply insecticidal soap</td>
+                        <td>- Carbaryl<br>- Permethrin<br>- Spinosad</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Sericinus montela larvae</td>
+                        <td>Stalk Borer Larvae</td>
+                        <td>- Remove and destroy infested plants<br>- Apply insecticidal soap</td>
+                        <td>- Carbaryl<br>- Permethrin<br>- Spinosad</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Spilarctia subcarnea (Walker) larvae</td>
+                        <td>Yellow Woolly Bear Larvae</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Spilarctia subcarnea (Walker) larvae-2</td>
+                        <td>Yellow Woolly Bear Larvae</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>Spilarctia subcarnea (Walker)</td>
+                        <td>Yellow Woolly Bear</td>
+                        <td>- Handpick caterpillars<br>- Use biological control agents</td>
+                        <td>- Bacillus thuringiensis (Bt)<br>- Carbaryl<br>- Permethrin</td>
+                    </tr>
+            </table>
+            <p>We hope our website will be a valuable tool in your farming journey, helping you detect and identify
+                pests accurately, providing recommendations for pest management, and connecting you with a supportive
+                farming community. Feel free to explore and make the most of our website's features. Happy farming and
+                pest control!</p>
+        </div>
+        <nav class="navbar1">
+            <ul>
+                <li>For Pest identification: <a href="/FrontPage" target="_blank">Click me!</a></li>
+            </ul>
+
+        </nav>
+        <nav class="navbar2">
+            <ul>
+                <li>For Pest Infestation prediction: <a href="https://piip.onrender.com/" target="_blank">Click me!</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        &copy; 2023 Pest Detection and Classification
+    </footer>
+</body>
+
+</html>

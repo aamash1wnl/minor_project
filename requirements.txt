@@ -1,0 +1,10 @@
+gunicorn
+flask
+flask_wtf
+wtforms
+werkzeug
+opencv-python
+ultralytics
+python-math
+black
+click
