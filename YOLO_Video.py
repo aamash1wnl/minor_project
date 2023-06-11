@@ -15,7 +15,7 @@ def video_detection(path_x):
     frame_height=int(cap.get(4))
     #out=cv2.VideoWriter('output.avi', cv2.VideoWriter_fourcc('M', 'J', 'P','G'), 10, (frame_width, frame_height))
     
-    model=YOLO('best_m.pt')
+    model=YOLO('best_n.pt')
     classNames = ['Anoplophora_chinensis', 'Apriona_germari(Hope)', 'Cerambycidae_larvae', 'Chalcophora_japonica', 'Clostera_anachoreta', 'Cnidocampa_flavescens(Walker_pupa)', 'Cnidocampa_flavescens(Walker）', 'Drosicha_contrahens_female', 'Drosicha_contrahens_male', 'Erthesina_fullo', 'Erthesina_fullo_nymph', 'Erthesina_fullo_nymph-2', 'Hyphantria_cunea', 'Hyphantria_cunea_larvae', 'Hyphantria_cunea_pupa', 'Latoia_consocia_Walker', 'Latoia_consocia_Walker_larvae', 'Micromelalopha_troglodyta(Graeser)', 'Micromelalopha_troglodyta(Graeser)_larvae', 'Monochamus_alternatus', 'Plagiodera_versicolora(Laicharting)', 'Plagiodera_versicolora(Laicharting)_larvae', 'Plagiodera_versicolora(Laicharting)_ovum', 'Psacothea_hilaris(Pascoe)', 'Psilogramma_menephron', 'Psilogramma_menephron_larvae', 'Sericinus_montela', 'Sericinus_montela_larvae', 'Spilarctia_subcarnea(Walker)_larvae', 'Spilarctia_subcarnea(Walker)_larvae-2', 'Spilarctia_subcarnea(Walker）']
     print(classNames)
     while True:
